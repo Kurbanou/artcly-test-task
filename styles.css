@@ -1,0 +1,335 @@
+/* ===== CSS Reset ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*base*/
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  background: rgba(254, 253, 252, 1);
+  color: rgba(46, 51, 47, 1);
+}
+
+/* header */
+
+header {
+  background: rgba(247, 244, 244, 1);
+  position: relative;
+  z-index: 10;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1240px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  height: 84px;
+}
+
+.logo {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 36px;
+  line-height: 100%;
+  user-select: none;
+}
+
+.nav-links {
+  display: flex;
+  width: 100%;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Open Sans;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 130%;
+}
+
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 244px;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.icon {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+  font-family: Open Sans;
+  font-weight: 600;
+  align-items: center;
+}
+
+.icon img {
+  background: rgba(29, 119, 238, 1);
+  border-radius: 2px;
+  padding: 4px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.viber img {
+  background: rgba(96, 94, 179, 1);
+}
+.telega img {
+  background: rgba(39, 166, 229, 1);
+}
+.whats img {
+  background: rgba(72, 201, 95, 1);
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.nav_buttons {
+  display: flex;
+  gap: 16px;
+  display: none;
+}
+
+.contacts_button,
+.nav_burger {
+  flex-shrink: 0;
+  display: flex;
+  width: 36px;
+  height: 36px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+  user-select: none;
+}
+
+.nav_burger {
+  gap: 3px;
+}
+
+.nav_burger span {
+  width: 30px;
+  height: 4px;
+  background-color: rgba(29, 119, 238, 1);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.nav_burger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav_burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav_burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 5;
+  display: none;
+}
+
+.overlay.active {
+  display: block;
+}
+
+@media (max-width: 1194px) {
+  .nav_buttons {
+    display: flex;
+  }
+  header .contacts {
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15);
+    flex-direction: column;
+    align-items: center;
+    height: 204px;
+    justify-content: center;
+    left: 0;
+    top: 100%;
+    font-size: 20px;
+    transition: all 0.2s linear;
+    transform: translateY(-20px);
+    opacity: 0;
+    display: none;
+  }
+
+  header .contacts.visible {
+    display: flex;
+    animation: fadeIn 0.4s ease forwards;
+    position: relative;
+    position: absolute;
+    width: 100%;
+  }
+
+  .viber img,
+  .telega img,
+  .whats img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .contacts_button {
+    display: flex;
+    transition: all 0.3s linear;
+  }
+  .contacts_button img {
+    transition: transform 0.3s linear;
+    transform-origin: center center;
+  }
+
+  .contacts_button.active img {
+    transform: rotate(-90deg);
+  }
+}
+
+@media (min-width: 900px) {
+  .nav-links :first-child {
+    flex-shrink: 0;
+    background: rgba(29, 119, 238, 1);
+    color: white;
+    display: flex;
+    width: 150px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 130%;
+    text-align: center;
+    text-transform: uppercase;
+    gap: 10px;
+  }
+
+  .nav-links :first-child::before {
+    content: "☰";
+  }
+}
+@media (max-width: 900px) {
+  .header-container {
+    height: 52px;
+  }
+  .logo {
+    font-size: 22px;
+  }
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    padding: 44px 20px;
+    max-width: 100%;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15);
+    font-family: Open Sans;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 130%;
+    gap: 24px;
+    text-align: center;
+    opacity: 0;
+    display: none;
+  }
+
+  header .nav-links.visible {
+    display: flex;
+    animation: fadeIn 0.4s ease forwards;
+  }
+
+  .nav_burger {
+    display: flex;
+  }
+}
+
+@media (max-width: 450px) {
+  .nav-links {
+    padding: 44px 10px;
+  }
+  .header-container {
+    padding: 0 10px;
+  }
+  .catalog-button {
+    display: none;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
