@@ -1,3 +1,7 @@
+:root {
+  --primary-color: rgba(29, 119, 238, 1);
+}
+
 /* ===== CSS Reset ===== */
 *,
 *::before,
@@ -59,6 +63,79 @@ body {
   color: rgba(46, 51, 47, 1);
 }
 
+.container {
+  width: 100%;
+  max-width: 1240px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 100%;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 100%;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(180deg, #4da6ff 0%, #1e90ff 100%);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: linear-gradient(180deg, #66b3ff 0%, #3399ff 100%);
+}
+
+.custom-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-weight: 600;
+}
+
+.custom-list li {
+  display: flex;
+  align-items: center;
+}
+
+.custom-list li::before {
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: url("./assets/img/li.png") no-repeat center;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .custom-list li::before {
+    width: 24px;
+    height: 24px;
+    margin-right: 4px;
+    flex-shrink: 0;
+  }
+}
+
 /* header */
 
 header {
@@ -99,6 +176,18 @@ header {
   line-height: 130%;
 }
 
+.nav-links a {
+  transition: all 0.3s linear;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
 .contacts {
   display: flex;
   flex-wrap: wrap;
@@ -118,7 +207,7 @@ header {
 }
 
 .icon img {
-  background: rgba(29, 119, 238, 1);
+  background: var(--primary-color);
   border-radius: 2px;
   padding: 4px;
   width: 20px;
@@ -160,6 +249,7 @@ header {
   flex-direction: column;
   display: none;
   user-select: none;
+  cursor: pointer;
 }
 
 .nav_burger {
@@ -169,7 +259,7 @@ header {
 .nav_burger span {
   width: 30px;
   height: 4px;
-  background-color: rgba(29, 119, 238, 1);
+  background-color: var(--primary-color);
   border-radius: 2px;
   transition: all 0.3s ease;
 }
@@ -255,7 +345,7 @@ header {
 @media (min-width: 900px) {
   .nav-links :first-child {
     flex-shrink: 0;
-    background: rgba(29, 119, 238, 1);
+    background: var(--primary-color);
     color: white;
     display: flex;
     width: 150px;
@@ -273,6 +363,9 @@ header {
 
   .nav-links :first-child::before {
     content: "☰";
+  }
+  .nav-links :first-child:hover {
+    color: white;
   }
 }
 @media (max-width: 900px) {
@@ -315,7 +408,8 @@ header {
   .nav-links {
     padding: 44px 10px;
   }
-  .header-container {
+  .header-container,
+  .container {
     padding: 0 10px;
   }
   .catalog-button {
@@ -333,3 +427,12 @@ header {
     transform: translateY(0);
   }
 }
+/* /header */
+
+/* intro */
+.intro {
+  box-shadow: 1px 4px 40px 0px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+/* /intro */
