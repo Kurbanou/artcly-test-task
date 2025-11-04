@@ -121,11 +121,23 @@ h2 {
   height: 32px;
   background: url("./assets/img/li.png") no-repeat center;
   margin-right: 10px;
+  flex-shrink: 0;
 }
 
-@media (max-width: 768px) {
+section {
+  margin-bottom: 112px;
+}
+
+@media (max-width: 640px) {
+  section {
+    margin-bottom: 56px;
+  }
   body {
     font-size: 14px;
+  }
+
+  h1 {
+    font-size: 24px;
   }
 
   .custom-list li::before {
@@ -433,6 +445,31 @@ header {
 .intro {
   box-shadow: 1px 4px 40px 0px rgba(0, 0, 0, 0.15);
   overflow: hidden;
+  margin-top: 48px;
+}
+.intro_content {
+  display: flex;
+  flex-wrap: wrap;
 }
 
+.intro_content_item {
+  flex: 1 1 0;
+  min-width: 320px;
+}
+
+.intro_content_item:first-of-type {
+  background: url(./assets/img/intro-fon1.png) no-repeat left top;
+  background-size: cover;
+  padding: 90px 80px;
+}
+
+.intro_content_item h1 {
+  max-width: 466px;
+  line-height: 1.5em;
+}
+.intro_content_item ul {
+  max-width: 422px;
+  margin-top: 40px;
+  margin-bottom: 32px;
+}
 /* /intro */
