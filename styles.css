@@ -458,8 +458,6 @@ header {
 }
 
 .intro_content_item:first-of-type {
-  background: url(./assets/img/intro-fon1.png) no-repeat left top;
-  background-size: cover;
   padding: 90px 80px;
 }
 
