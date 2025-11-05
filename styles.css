@@ -725,8 +725,8 @@ header {
 
 .help-visual {
   background-image: url(./assets/img/help-bg1.png);
-  background-size: cover;
-
+  background-size: 105% 110%;
+  background-position: left;
   background-repeat: no-repeat;
   width: 100%;
   max-width: 45%;
