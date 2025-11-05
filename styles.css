@@ -82,7 +82,7 @@ h1 {
 
 h2 {
   font-weight: 700;
-  font-size: 32px;
+  font-size: 36px;
   line-height: 100%;
   line-height: 1.2em;
 }
@@ -562,7 +562,7 @@ header {
 /* catalog */
 
 .catalog_content {
-  margin-top: 40px;
+  margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
@@ -593,7 +593,7 @@ header {
   font-weight: 400;
   font-size: 14px;
   line-height: 100%;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .item_img img {
@@ -665,8 +665,9 @@ header {
 
 /* help-block */
 .help-block {
-  background: linear-gradient(135deg, #f5f7fa, #e0ecf8);
-  padding: 60px 20px;
+  background: linear-gradient(95.69deg, #f6f4f1 3.21%, #e8e4e0 100%);
+
+  padding: 60px 20px 60px 20px;
 }
 
 .help-layout {
@@ -684,8 +685,7 @@ header {
 }
 
 .help-form h2 {
-  font-size: 32px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .help-form p {
@@ -697,17 +697,20 @@ header {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  max-width: 460px;
+  max-width: 430px;
   align-items: flex-start;
 }
 
 .help-form input[type="text"],
 .help-form input[type="tel"] {
   padding: 12px 16px;
-  font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 6px;
   width: 100%;
+  background: rgba(255, 255, 255, 1);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
 }
 
 .checkbox {
@@ -717,26 +720,15 @@ header {
   font-size: 14px;
 }
 
-.btn-submit {
-  background: linear-gradient(180deg, #4da6ff 0%, #1e90ff 100%);
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.btn-submit:hover {
-  background: linear-gradient(180deg, #66b3ff 0%, #3399ff 100%);
-}
-
 .help-visual {
   flex: 1 1 300px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
+}
+
+.help-form .btn {
+  margin-top: 10px;
 }
 
 .help-image {
