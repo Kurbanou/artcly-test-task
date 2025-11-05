@@ -891,14 +891,12 @@ footer {
     linear-gradient(0deg, rgba(190, 188, 185, 0.4), rgba(190, 188, 185, 0.4));
   padding: 44px 0 30px 0;
 }
-footer .contacts {
-  width: 280px;
-}
+
 .footer_inner_content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   gap: 20px;
 }
 
@@ -912,7 +910,7 @@ footer .contacts {
 }
 
 .footer_logo p {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 hr {
@@ -935,6 +933,7 @@ hr {
   font-size: 12px;
   line-height: 130%;
   color: rgba(94, 94, 94, 1);
+  max-width: 735px;
 }
 
 .footer_menu {
@@ -946,6 +945,9 @@ hr {
 }
 
 @media (max-width: 1000px) {
+  footer .contacts {
+    width: 280px;
+  }
   .footer_logo {
     max-width: 100%;
     flex: 1 1 100%;
