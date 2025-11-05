@@ -677,22 +677,16 @@ header {
 /* help-block */
 .help-block {
   background: linear-gradient(95.69deg, #f6f4f1 3.21%, #e8e4e0 100%);
-
-  padding: 60px 20px 60px 20px;
 }
 
 .help-layout {
   display: flex;
-  flex-wrap: wrap;
-  gap: 50px;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .help-form {
-  flex: 1 1 400px;
+  padding: 60px 0 60px 40px;
 }
 
 .help-form h2 {
@@ -724,21 +718,12 @@ header {
   line-height: 130%;
 }
 
-.checkbox {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-  margin-top: 10px;
-  color: rgba(94, 94, 94, 1);
-  border: 1px solid rgba(221, 221, 221, 1);
-}
-
 .help-visual {
-  flex: 1 1 300px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  background: url(./assets/img/help-bg1.png) right top no-repeat;
+  background-size: cover;
 }
 
 .help-form .btn {
@@ -758,6 +743,7 @@ header {
   cursor: pointer;
   font-size: 14px;
   user-select: none;
+  margin-top: 10px;
 }
 
 .custom-checkbox input[type="checkbox"] {
