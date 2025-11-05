@@ -44,6 +44,9 @@ a {
   color: inherit;
 }
 
+a:hover {
+}
+
 ul,
 ol {
   list-style: none;
@@ -227,10 +230,12 @@ header {
 
 .nav-links a {
   transition: all 0.3s linear;
+  border-bottom: transparent solid 2px;
 }
 
 .nav-links a:hover {
   color: var(--primary-color);
+  border-bottom: #1e90ff solid 2px;
 }
 
 .nav-links a:hover {
@@ -582,11 +587,17 @@ header {
   border-radius: 10px;
   padding-top: 16px;
   padding-bottom: 16px;
+  cursor: pointer;
+  transition: all 0.2s linear;
 }
 
 .new .catalog_content .item {
   padding: 20px;
   background: rgba(255, 255, 255, 1);
+}
+
+.catalog_content .item:hover {
+  box-shadow: none;
 }
 
 .item_code {
