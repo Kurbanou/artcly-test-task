@@ -45,6 +45,7 @@ a {
 }
 
 a:hover {
+  color: var(--primary-color);
 }
 
 ul,
@@ -943,6 +944,7 @@ hr {
   justify-content: space-between;
   row-gap: 16px;
 }
+
 @media (max-width: 1000px) {
   .footer_logo {
     max-width: 100%;
