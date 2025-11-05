@@ -71,3 +71,15 @@ document.addEventListener("click", (e) => {
     closeAll();
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const textBlock = document.querySelector(".text-block");
+  const toggleButton = document.querySelector(".toggle-button");
+
+  toggleButton.addEventListener("click", () => {
+    textBlock.classList.toggle("expanded");
+    toggleButton.textContent = textBlock.classList.contains("expanded")
+      ? "Скрыть"
+      : "Показать больше";
+  });
+});
