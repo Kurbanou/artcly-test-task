@@ -98,6 +98,14 @@ h2 {
   line-height: 1.2em;
 }
 
+h3 {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 18px;
+  line-height: 130%;
+  margin-bottom: 20px;
+}
+
 .btn {
   display: inline-block;
   min-width: 280px;
@@ -873,3 +881,84 @@ header {
 }
 
 /* /about */
+
+/* footer */
+
+footer {
+  font-size: 14px;
+  background: linear-gradient(0deg, #eeebe7, #eeebe7),
+    linear-gradient(0deg, rgba(190, 188, 185, 0.4), rgba(190, 188, 185, 0.4));
+  padding: 44px 0 30px 0;
+}
+footer .contacts {
+  width: 280px;
+}
+.footer_inner_content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.footer_logo {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 100%;
+  color: rgba(46, 51, 47, 1);
+
+  max-width: 220px;
+}
+
+.footer_logo p {
+  margin-top: 20px;
+}
+
+hr {
+  border: 1px solid rgba(196, 196, 196, 1);
+  margin: 12px 0;
+}
+.footer_politika {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+  color: rgba(94, 94, 94, 1);
+  gap: 10px;
+}
+
+.footer_sub {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+  color: rgba(94, 94, 94, 1);
+}
+
+.footer_menu {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 360px;
+  justify-content: space-between;
+  row-gap: 16px;
+}
+@media (max-width: 1000px) {
+  .footer_logo {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer_menu li {
+    flex: 1 1 50%;
+  }
+  .footer_logo p {
+    margin-top: 10px;
+  }
+  hr {
+    margin: 20px 0;
+  }
+}
+/* /footer */
